@@ -4,18 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
+
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        #counter { font-size: 2em; margin: 20px; }
-        button { font-size: 1em; margin: 10px; padding: 10px 20px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #counter {
+            font-size: 3em;
+            margin: 20px 0;
+            color: #2575fc;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 1em;
+            margin: 10px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        #increment {
+            background-color: #28a745;
+        }
+
+        #decrement {
+            background-color: #dc3545;
+        }
+
+        #reset {
+            background-color: #6c757d;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Counter App</h1>
-    <div id="counter">0</div>
-    <button id="increment">Increment</button>
-    <button id="decrement">Decrement</button>
-    <button id="reset">Reset</button>
+    <div class="container">
+        <h1>Counter App</h1>
+        <div id="counter">0</div>
+        <button id="increment">Increment</button>
+        <button id="decrement">Decrement</button>
+        <button id="reset">Reset</button>
+    </div>
 
     <script>
         let count = 0;
